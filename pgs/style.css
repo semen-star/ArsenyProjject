@@ -529,3 +529,41 @@ body {
         min-width: 100%;
     }
 }
+
+/* Стили для страницы Немецкого квартала */
+.historical-context {
+    display: grid;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.context-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #2ecc71;
+}
+
+.context-item h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.mini-map {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 4px solid #3498db;
+}
+
+.mini-map a {
+    color: #e74c3c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.mini-map a:hover {
+    text-decoration: underline;
+}

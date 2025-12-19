@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архитектурные объекты | Архитектурная Магнитка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-landmark"></i> МагнитАрх
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="one.html">Эпохи</a></li>
+                <li><a href="two.html" class="active">Объекты</a></li>
+                <li><a href="three.html">Карта</a></li>
+                <li><a href="../index.html#about">О проекте</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Шапка страницы -->
+    <header class="inner-header">
+        <div class="container inner-header-content">
+            <h1>Архитектурные объекты</h1>
+            <p>Фотогалерея знаковых зданий Орджоникидзевского района</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">Галерея архитектурного наследия</h2>
+            
+            <!-- Фильтры -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Все объекты</button>
+                <button class="filter-btn" data-filter="stalin">Сталинский ампир</button>
+                <button class="filter-btn" data-filter="construct">Конструктивизм</button>
+                <button class="filter-btn" data-filter="german">Немецкий квартал</button>
+                <button class="filter-btn" data-filter="modern">Современность</button>
+            </div>
+            
+            <!-- Галерея -->
+            <div class="gallery-grid">
+                <!-- Объект 1 -->
+                <div class="gallery-item slide-up" data-category="stalin">
+                    <div class="gallery-img">
+                        <img src="../imgs/object1.jpg" alt="Дворец культуры металлургов">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Дворец культуры металлургов</h3>
+                        <p>Центр культурной жизни Магнитогорска. Построен в 1950-е годы в стиле сталинского ампира.</p>
+                        <span class="object-year">1954 г.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 2 -->
+                <div class="gallery-item slide-up" data-category="construct">
+                    <div class="gallery-img">
+                        <img src="../imgs/object2.jpg" alt="Квартал №1 Соцгорода">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Квартал №1 (Соцгород)</h3>
+                        <p>Первый капитальный жилой квартал Магнитогорска. Образец раннего конструктивизма 1930-х.</p>
+                        <span class="object-year">1932 г.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 3 -->
+                <div class="gallery-item slide-up" data-category="german">
+                    <div class="gallery-img">
+                        <img src="../imgs/object3.jpg" alt="Немецкий квартал">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Немецкий квартал (14-а)</h3>
+                        <p>Комплекс 2-3 этажных домов, построенных военнопленными. Уникальное смешение стилей.</p>
+                        <span class="object-year">1948-1952 гг.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 4 -->
+                <div class="gallery-item slide-up" data-category="stalin">
+                    <div class="gallery-img">
+                        <img src="../imgs/object4.jpg" alt="Проспект Металлургов">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Проспект Металлургов</h3>
+                        <p>Главная магистраль района. Цельный ансамбль сталинской застройки с колоннадами и шпилями.</p>
+                        <span class="object-year">1940-1950-е гг.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 5 -->
+                <div class="gallery-item slide-up" data-category="stalin">
+                    <div class="gallery-img">
+                        <img src="../imgs/object5.jpg" alt="Дом со шпилем">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Дом со шпилем на пр. Ленина</h3>
+                        <p>Одна из архитектурных доминант. Характерный пример послевоенного "сталинского ампира".</p>
+                        <span class="object-year">1953 г.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 6 -->
+                <div class="gallery-item slide-up" data-category="modern">
+                    <div class="gallery-img">
+                        <img src="../imgs/object6.jpg" alt="Современный жилой комплекс">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Жилой комплекс "Притяжение"</h3>
+                        <p>Пример современной архитектуры района. Монолитно-кирпичные дома с концепцией "двор без машин".</p>
+                        <span class="object-year">2018 г.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 7 -->
+                <div class="gallery-item slide-up" data-category="construct">
+                    <div class="gallery-img">
+                        <img src="../imgs/object7.jpg" alt="Фабрика-кухня">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Бывшая фабрика-кухня</h3>
+                        <p>Типичное сооружение эпохи конструктивизма. Предназначалась для коллективного питания рабочих.</p>
+                        <span class="object-year">1934 г.</span>
+                    </div>
+                </div>
+                
+                <!-- Объект 8 -->
+                <div class="gallery-item slide-up" data-category="german">
+                    <div class="gallery-img">
+                        <img src="../imgs/object8.jpg" alt="Арочная галерея">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Арочные галереи немецкого квартала</h3>
+                        <p>Характерный элемент застройки. Соединяют дома и создают уютные внутренние дворики.</p>
+                        <span class="object-year">1950 г.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Примечание -->
+            <div class="era-detail" style="margin-top: 50px;">
+                <h3><i class="fas fa-info-circle"></i> Как пользоваться галереей</h3>
+                <p>Используйте кнопки фильтров выше для отбора объектов по стилям. Нажмите на карточку объекта, чтобы увидеть его в увеличенном виде. Все фотографии можно использовать в образовательных целях с указанием источника.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Архитектурная Магнитка</h3>
+                    <p>Образовательный проект об архитектуре Орджоникидзевского района Магнитогорска. © 2025</p>
+                    <p><strong>Автор:</strong> Стариков Арсений Михайлович<br>
+                    <strong>Учреждение:</strong> МОУ СОШ №65, г. Магнитогорск</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Страницы</h3>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="one.html">Эпохи</a></li>
+                        <li><a href="two.html">Объекты</a></li>
+                        <li><a href="three.html">Карта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты автора</h3>
+                    <p>Стариков Арсений</p>
+                    <div class="social-links">
+                        <a href="https://vk.com/id573348096" target="_blank" title="ВКонтакте">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="https://t.me/Senya131313" target="_blank" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                    <p class="footer-note">Для связи по вопросам проекта</p>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-copy">Создано с <i class="fas fa-heart"></i> для Магнитогорска | 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
