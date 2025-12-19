@@ -515,3 +515,99 @@ body {
     margin-top: 8px;
     font-style: italic;
 }
+
+/* Быстрые кнопки эпох */
+.quick-links {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.quick-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.quick-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quick-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    transition: all 0.4s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.quick-btn i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.quick-btn span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.quick-btn:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+}
+
+.quick-btn:hover i {
+    transform: scale(1.2);
+}
+
+/* Цвета кнопок */
+.btn-constr {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.btn-stalin {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.btn-german {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+/* Адаптивность для быстрых кнопок */
+@media (max-width: 768px) {
+    .quick-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-btn {
+        width: 100%;
+        max-width: 300px;
+        height: 140px;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 25px;
+    }
+    
+    .quick-btn i {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+    
+    .quick-btn span {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+}

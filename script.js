@@ -85,3 +85,32 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('Сайт "Архитектурная Магнитка" загружен!');
 });
+
+
+// Анимация для быстрых кнопок
+document.addEventListener('DOMContentLoaded', function() {
+    // Анимация появления быстрых кнопок
+    const quickButtons = document.querySelectorAll('.quick-btn');
+    quickButtons.forEach((btn, index) => {
+        btn.style.opacity = '0';
+        btn.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            btn.style.transition = 'opacity 0.8s, transform 0.8s';
+            btn.style.opacity = '1';
+            btn.style.transform = 'translateY(0)';
+        }, 300 + (index * 200));
+    });
+    
+    // Добавляем звук клика для кнопок (опционально)
+    const quickLinks = document.querySelectorAll('.quick-btn, .btn-card');
+    quickLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Можно добавить звук или другую обратную связь
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+});

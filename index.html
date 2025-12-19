@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-<!-- ЗАМЕНИТЬ СЕКЦИЮ <head> (строки 4-12) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
     <meta name="author" content="Стариков Арсений Михайлович">
 </head>
 <body>
@@ -38,14 +37,14 @@
         <div class="hero-overlay"></div>
     </header>
 
-    <!-- Секция "Эпохи" -->
+    <!-- Секция "Эпохи" с кнопками -->
     <section class="section eras-section" id="eras">
         <div class="container">
             <h2 class="section-title">Архитектурные эпохи района</h2>
-            <p class="section-subtitle">Нажмите на карточку, чтобы узнать больше</p>
+            <p class="section-subtitle">Изучите каждую эпоху подробно</p>
 
             <div class="eras-grid">
-                <!-- Карточка 1 -->
+                <!-- Конструктивизм -->
                 <div class="era-card slide-up">
                     <div class="card-image">
                         <img src="imgs/social city.jpg" alt="Конструктивизм 1930-х">
@@ -55,11 +54,13 @@
                     </div>
                     <div class="card-content">
                         <p>Первые кварталы Соцгорода, дома-коммуны. Функциональность, аскетизм, новые формы быта.</p>
-                        <a href="pgs/one.html" class="btn-card">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        <a href="pgs/one.html" class="btn-card">
+                            Изучить эпоху <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Карточка 2 -->
+                <!-- Сталинский ампир -->
                 <div class="era-card slide-up">
                     <div class="card-image">
                         <img src="imgs/metalurg.jpg" alt="Сталинский ампир">
@@ -69,11 +70,13 @@
                     </div>
                     <div class="card-content">
                         <p>Проспекты Металлургов и Ленина. Колонны, лепнина, монументальность, триумф Победы.</p>
-                        <a href="pgs/two.html" class="btn-card">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        <a href="pgs/two.html" class="btn-card">
+                            Изучить эпоху <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Карточка 3 -->
+                <!-- Немецкий квартал -->
                 <div class="era-card slide-up">
                     <div class="card-image">
                         <img src="imgs/nemts.webp" alt="Немецкий квартал">
@@ -83,8 +86,29 @@
                     </div>
                     <div class="card-content">
                         <p>Квартал 14-а, построенный военнопленными. Арочные галереи, плитняк, европейские мотивы.</p>
-                        <a href="pgs/three.html" class="btn-card">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        <a href="pgs/three.html" class="btn-card">
+                            Изучить эпоху <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Быстрый доступ к страницам эпох -->
+            <div class="quick-links">
+                <h3 class="quick-title">Быстрый переход к эпохам</h3>
+                <div class="quick-buttons">
+                    <a href="pgs/one.html" class="quick-btn btn-constr">
+                        <i class="fas fa-cube"></i>
+                        <span>Конструктивизм</span>
+                    </a>
+                    <a href="pgs/two.html" class="quick-btn btn-stalin">
+                        <i class="fas fa-columns"></i>
+                        <span>Сталинский ампир</span>
+                    </a>
+                    <a href="pgs/three.html" class="quick-btn btn-german">
+                        <i class="fas fa-archway"></i>
+                        <span>Немецкий квартал</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -96,9 +120,11 @@
             <h2 class="section-title">Интерактивная карта объектов</h2>
             <div class="map-container slide-up">
                 <div class="map-placeholder" id="mapPlaceholder">
-                    <!-- Здесь будет встроена карта Яндекса/Google -->
                     <p>Здесь будет интерактивная карта с метками архитектурных объектов.</p>
                     <p>Для примера: метка <span class="marker">A</span> — ДК Металлургов, метка <span class="marker">B</span> — «Немецкий квартал».</p>
+                    <a href="pgs/three.html" class="btn-card" style="margin-top: 20px;">
+                        Открыть полную карту <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
                 <div class="map-info">
                     <h3>Ключевые объекты на карте</h3>
@@ -113,42 +139,41 @@
     </section>
 
     <!-- Футер -->
-<footer class="footer" id="about">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Архитектурная Магнитка</h3>
-                <p>Образовательный проект об архитектуре Орджоникидзевского района Магнитогорска. © 2025</p>
-                <p><strong>Автор:</strong> Стариков Арсений Михайлович<br>
-                <strong>Учреждение:</strong> МОУ СОШ №65, г. Магнитогорск</p>
-            </div>
-            <div class="footer-col">
-                <h3>Быстрые ссылки</h3>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#eras">Эпохи</a></li>
-                    <li><a href="#map">Карта</a></li>
-                    <li><a href="#test">Тест</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Контакты автора</h3>
-                <p>Стариков Арсений</p>
-                <div class="social-links">
-                    <a href="https://vk.com/id573348096" target="_blank" title="ВКонтакте">
-                        <i class="fab fa-vk"></i>
-                    </a>
-                    <a href="https://t.me/Senya131313" target="_blank" title="Telegram">
-                        <i class="fab fa-telegram"></i>
-                    </a>
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Архитектурная Магнитка</h3>
+                    <p>Образовательный проект об архитектуре Орджоникидзевского района Магнитогорска. © 2025</p>
+                    <p><strong>Автор:</strong> Стариков Арсений Михайлович<br>
+                    <strong>Учреждение:</strong> МОУ СОШ №65, г. Магнитогорск</p>
                 </div>
-                <p class="footer-note">Для связи по вопросам проекта</p>
+                <div class="footer-col">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#eras">Эпохи</a></li>
+                        <li><a href="#map">Карта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты автора</h3>
+                    <p>Стариков Арсений</p>
+                    <div class="social-links">
+                        <a href="https://vk.com/id573348096" target="_blank" title="ВКонтакте">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="https://t.me/Senya131313" target="_blank" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                    <p class="footer-note">Для связи по вопросам проекта</p>
+                </div>
             </div>
+            <hr>
+            <p class="footer-copy">Создано с <i class="fas fa-heart"></i> для Магнитогорска</p>
         </div>
-        <hr>
-        <p class="footer-copy">Создано с <i class="fas fa-heart"></i> для Магнитогорска | 2025</p>
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
