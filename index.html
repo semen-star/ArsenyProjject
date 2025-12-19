@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архитектурная Магнитка | Орджоникидзевский район</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">МагнитАрх</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#eras">Эпохи</a></li>
+                <li><a href="#map">Карта</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#test">Тест</a></li>
+                <li><a href="#about">О проекте</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <header class="hero" id="home">
+        <div class="hero-content fade-in">
+            <h1>Архитектурная летопись Магнитогорска</h1>
+            <p>Исследуйте уникальную историю Орджоникидзевского района: от конструктивизма к сталинскому ампиру</p>
+            <a href="#eras" class="btn-hero">Начать путешествие</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- Секция "Эпохи" -->
+    <section class="section eras-section" id="eras">
+        <div class="container">
+            <h2 class="section-title">Архитектурные эпохи района</h2>
+            <p class="section-subtitle">Нажмите на карточку, чтобы узнать больше</p>
+
+            <div class="eras-grid">
+                <!-- Карточка 1 -->
+                <div class="era-card slide-up">
+                    <div class="card-image">
+                        <img src="images/constructivism.jpg" alt="Конструктивизм 1930-х">
+                        <div class="card-overlay">
+                            <h3>Конструктивизм 1930-х</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Первые кварталы Соцгорода, дома-коммуны. Функциональность, аскетизм, новые формы быта.</p>
+                        <a href="#" class="btn-card">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="era-card slide-up">
+                    <div class="card-image">
+                        <img src="images/stalin_empire.jpg" alt="Сталинский ампир">
+                        <div class="card-overlay">
+                            <h3>Сталинский ампир</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Проспекты Металлургов и Ленина. Колонны, лепнина, монументальность, триумф Победы.</p>
+                        <a href="#" class="btn-card">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="era-card slide-up">
+                    <div class="card-image">
+                        <img src="images/german_quarter.jpg" alt="Немецкий квартал">
+                        <div class="card-overlay">
+                            <h3>Немецкий квартал</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Квартал 14-а, построенный военнопленными. Арочные галереи, плитняк, европейские мотивы.</p>
+                        <a href="#" class="btn-card">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с интерактивной картой -->
+    <section class="section map-section" id="map">
+        <div class="container">
+            <h2 class="section-title">Интерактивная карта объектов</h2>
+            <div class="map-container slide-up">
+                <div class="map-placeholder" id="mapPlaceholder">
+                    <!-- Здесь будет встроена карта Яндекса/Google -->
+                    <p>Здесь будет интерактивная карта с метками архитектурных объектов.</p>
+                    <p>Для примера: метка <span class="marker">A</span> — ДК Металлургов, метка <span class="marker">B</span> — «Немецкий квартал».</p>
+                </div>
+                <div class="map-info">
+                    <h3>Ключевые объекты на карте</h3>
+                    <ul class="map-list">
+                        <li><strong>Проспект Металлургов:</strong> Цельный ансамбль сталинской застройки.</li>
+                        <li><strong>Площадь Орджоникидзе:</strong> Административный центр района.</li>
+                        <li><strong>Квартал 14-а:</strong> «Немецкий квартал» послевоенной постройки.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Проблемы сохранения" -->
+    <section class="section problems-section">
+        <div class="container">
+            <h2 class="section-title">Сохраним наследие вместе</h2>
+            <div class="problems-content fade-in">
+                <p>Исторические здания страдают от износа, неграмотных реконструкций и угрозы сноса. Наш проект привлекает внимание к этим проблемам.</p>
+                <a href="#contact" class="btn-problem">Предложить помощь</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Архитектурная Магнитка</h3>
+                    <p>Образовательный проект об архитектуре Орджоникидзевского района Магнитогорска. © 2024</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#eras">Эпохи</a></li>
+                        <li><a href="#map">Карта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p>magnitarch@example.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-copy">Создано с <i class="fas fa-heart"></i> для Магнитогорска</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
