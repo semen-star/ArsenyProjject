@@ -567,3 +567,182 @@ body {
 .mini-map a:hover {
     text-decoration: underline;
 }
+
+/* Стили для страниц эпох */
+
+/* Особенности архитектуры */
+.arch-features, .arch-elements {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-item, .element-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.feature-icon, .element-icon {
+    font-size: 2rem;
+    color: #e74c3c;
+    min-width: 60px;
+    text-align: center;
+}
+
+.feature-text h4, .element-text h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+/* Историческое значение */
+.historical-significance {
+    background: #fff8e1;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 4px solid #f39c12;
+}
+
+.significance-list {
+    margin: 15px 0 15px 20px;
+}
+
+.significance-list li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.significance-list li:before {
+    content: "•";
+    color: #e74c3c;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -20px;
+}
+
+.current-status {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #2ecc71;
+}
+
+/* Материалы и технологии */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.material-item {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid #3498db;
+}
+
+.material-item h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.material-item h4 i {
+    color: #e74c3c;
+}
+
+.construction-note {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid #f39c12;
+}
+
+/* Современное состояние */
+.current-state {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.state-positive, .state-negative {
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.state-positive {
+    background: #e8f5e9;
+    border-left: 4px solid #2ecc71;
+}
+
+.state-negative {
+    background: #ffebee;
+    border-left: 4px solid #e74c3c;
+}
+
+.state-positive h4, .state-negative h4 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.state-positive h4 i {
+    color: #27ae60;
+}
+
+.state-negative h4 i {
+    color: #c0392b;
+}
+
+.state-positive ul, .state-negative ul {
+    margin-left: 20px;
+}
+
+.heritage-value {
+    background: #e3f2fd;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid #3498db;
+}
+
+.heritage-value h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heritage-value h4 i {
+    color: #e74c3c;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .feature-item, .element-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature-icon, .element-icon {
+        min-width: auto;
+    }
+    
+    .current-state {
+        grid-template-columns: 1fr;
+    }
+}

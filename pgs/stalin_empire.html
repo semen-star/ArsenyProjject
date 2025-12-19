@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Архитектурные объекты | Архитектурная Магнитка</title>
+    <title>Сталинский ампир | Архитектурная Магнитка</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
@@ -20,9 +20,10 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html">Главная</a></li>
-                <li><a href="one.html">Эпохи</a></li>
-                <li><a href="two.html" class="active">Объекты</a></li>
-                <li><a href="three.html">Карта</a></li>
+                <li><a href="constructivism.html">Конструктивизм</a></li>
+                <li><a href="stalin_empire.html" class="active">Сталинский ампир</a></li>
+                <li><a href="german_quarter.html">Немецкий квартал</a></li>
+                <li><a href="map.html">Карта</a></li>
                 <li><a href="../index.html#about">О проекте</a></li>
             </ul>
         </div>
@@ -31,128 +32,188 @@
     <!-- Шапка страницы -->
     <header class="inner-header">
         <div class="container inner-header-content">
-            <h1>Архитектурные объекты</h1>
-            <p>Фотогалерея знаковых зданий Орджоникидзевского района</p>
+            <h1>Сталинский ампир</h1>
+            <p>Архитектура триумфа: послевоенное величие Магнитогорска</p>
         </div>
     </header>
 
     <!-- Основной контент -->
     <main class="main-content">
         <div class="container">
-            <h2 class="section-title">Галерея архитектурного наследия</h2>
-            
-            <!-- Фильтры -->
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">Все объекты</button>
-                <button class="filter-btn" data-filter="stalin">Сталинский ампир</button>
-                <button class="filter-btn" data-filter="construct">Конструктивизм</button>
-                <button class="filter-btn" data-filter="german">Немецкий квартал</button>
-                <button class="filter-btn" data-filter="modern">Современность</button>
-            </div>
-            
-            <!-- Галерея -->
-            <div class="gallery-grid">
-                <!-- Объект 1 -->
-                <div class="gallery-item slide-up" data-category="stalin">
-                    <div class="gallery-img">
-                        <img src="../imgs/object1.jpg" alt="Дворец культуры металлургов">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Дворец культуры металлургов</h3>
-                        <p>Центр культурной жизни Магнитогорска. Построен в 1950-е годы в стиле сталинского ампира.</p>
-                        <span class="object-year">1954 г.</span>
-                    </div>
-                </div>
+            <!-- Основная информация -->
+            <div class="era-detail">
+                <h3><i class="fas fa-crown"></i> Идеология и символика</h3>
+                <p><strong>Сталинский ампир</strong> (советская неоклассика) — архитектурный стиль, доминировавший в СССР с середины 1930-х до середины 1950-х годов. В Магнитогорске наиболее полно представлен в застройке правобережья.</p>
                 
-                <!-- Объект 2 -->
-                <div class="gallery-item slide-up" data-category="construct">
-                    <div class="gallery-img">
-                        <img src="../imgs/object2.jpg" alt="Квартал №1 Соцгорода">
+                <div class="era-info-grid">
+                    <div class="info-card">
+                        <h4>Идеологические задачи</h4>
+                        <ul>
+                            <li>Демонстрация мощи советского государства</li>
+                            <li>Прославление Победы в Великой Отечественной войне</li>
+                            <li>Создание образа "светлого будущего"</li>
+                            <li>Воспитание гордости за страну и город</li>
+                        </ul>
                     </div>
-                    <div class="gallery-info">
-                        <h3>Квартал №1 (Соцгород)</h3>
-                        <p>Первый капитальный жилой квартал Магнитогорска. Образец раннего конструктивизма 1930-х.</p>
-                        <span class="object-year">1932 г.</span>
+                    
+                    <div class="info-card">
+                        <h4>Художественные принципы</h4>
+                        <ul>
+                            <li>Обращение к классическому наследию</li>
+                            <li>Монументальность и парадность</li>
+                            <li>Симметрия и регулярность</li>
+                            <li>Богатый архитектурный декор</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <!-- Объект 3 -->
-                <div class="gallery-item slide-up" data-category="german">
-                    <div class="gallery-img">
-                        <img src="../imgs/object3.jpg" alt="Немецкий квартал">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Немецкий квартал (14-а)</h3>
-                        <p>Комплекс 2-3 этажных домов, построенных военнопленными. Уникальное смешение стилей.</p>
-                        <span class="object-year">1948-1952 гг.</span>
-                    </div>
-                </div>
-                
-                <!-- Объект 4 -->
-                <div class="gallery-item slide-up" data-category="stalin">
-                    <div class="gallery-img">
-                        <img src="../imgs/object4.jpg" alt="Проспект Металлургов">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Проспект Металлургов</h3>
-                        <p>Главная магистраль района. Цельный ансамбль сталинской застройки с колоннадами и шпилями.</p>
-                        <span class="object-year">1940-1950-е гг.</span>
-                    </div>
-                </div>
-                
-                <!-- Объект 5 -->
-                <div class="gallery-item slide-up" data-category="stalin">
-                    <div class="gallery-img">
-                        <img src="../imgs/object5.jpg" alt="Дом со шпилем">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Дом со шпилем на пр. Ленина</h3>
-                        <p>Одна из архитектурных доминант. Характерный пример послевоенного "сталинского ампира".</p>
-                        <span class="object-year">1953 г.</span>
-                    </div>
-                </div>
-                
-                <!-- Объект 6 -->
-                <div class="gallery-item slide-up" data-category="modern">
-                    <div class="gallery-img">
-                        <img src="../imgs/object6.jpg" alt="Современный жилой комплекс">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Жилой комплекс "Притяжение"</h3>
-                        <p>Пример современной архитектуры района. Монолитно-кирпичные дома с концепцией "двор без машин".</p>
-                        <span class="object-year">2018 г.</span>
-                    </div>
-                </div>
-                
-                <!-- Объект 7 -->
-                <div class="gallery-item slide-up" data-category="construct">
-                    <div class="gallery-img">
-                        <img src="../imgs/object7.jpg" alt="Фабрика-кухня">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Бывшая фабрика-кухня</h3>
-                        <p>Типичное сооружение эпохи конструктивизма. Предназначалась для коллективного питания рабочих.</p>
-                        <span class="object-year">1934 г.</span>
-                    </div>
-                </div>
-                
-                <!-- Объект 8 -->
-                <div class="gallery-item slide-up" data-category="german">
-                    <div class="gallery-img">
-                        <img src="../imgs/object8.jpg" alt="Арочная галерея">
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Арочные галереи немецкого квартала</h3>
-                        <p>Характерный элемент застройки. Соединяют дома и создают уютные внутренние дворики.</p>
-                        <span class="object-year">1950 г.</span>
+                    
+                    <div class="info-card">
+                        <h4>Социальная функция</h4>
+                        <ul>
+                            <li>"Дворцы для рабочих"</li>
+                            <li>Создание репрезентативных общественных пространств</li>
+                            <li>Формирование новых городских ансамблей</li>
+                            <li>Утверждение статуса Магнитогорска как города-героя труда</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Примечание -->
-            <div class="era-detail" style="margin-top: 50px;">
-                <h3><i class="fas fa-info-circle"></i> Как пользоваться галереей</h3>
-                <p>Используйте кнопки фильтров выше для отбора объектов по стилям. Нажмите на карточку объекта, чтобы увидеть его в увеличенном виде. Все фотографии можно использовать в образовательных целях с указанием источника.</p>
+
+            <!-- Ключевые ансамбли -->
+            <div class="era-detail">
+                <h3><i class="fas fa-city"></i> Ключевые архитектурные ансамбли</h3>
+                
+                <div class="era-info-grid">
+                    <div class="info-card">
+                        <h4><i class="fas fa-road"></i> Проспект Металлургов</h4>
+                        <p><strong>Период строительства:</strong> 1948-1955</p>
+                        <p><strong>Длина:</strong> 2.8 км</p>
+                        <p><strong>Особенности:</strong> Цельный ансамбль 4-5 этажных жилых домов, образующих единый парадный фасад. Дома украшены колоннадами, барельефами, вазонами.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-theater-masks"></i> Дворец культуры металлургов</h4>
+                        <p><strong>Год постройки:</strong> 1954</p>
+                        <p><strong>Архитектор:</strong> М.Д. Данилов</p>
+                        <p><strong>Особенности:</strong> Архитектурная доминанта района. Коринфские колонны, скульптурные группы, богатая лепнина. Вместимость — 1200 зрителей.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-square"></i> Площадь Орджоникидзе</h4>
+                        <p><strong>Год формирования:</strong> 1950</p>
+                        <p><strong>Размеры:</strong> 150×200 м</p>
+                        <p><strong>Особенности:</strong> Административный центр правобережья. Ансамбль из зданий в стиле неоклассики, образующих замкнутое пространство.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Архитектурные элементы -->
+            <div class="era-detail">
+                <h3><i class="fas fa-archway"></i> Характерные архитектурные элементы</h3>
+                
+                <div class="arch-elements">
+                    <div class="element-card">
+                        <div class="element-icon">
+                            <i class="fas fa-columns"></i>
+                        </div>
+                        <div class="element-text">
+                            <h4>Ордерные системы</h4>
+                            <p>Использование классических ордеров: дорического, ионического, коринфского. Колоннады, портики, пилястры.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="element-card">
+                        <div class="element-icon">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <div class="element-text">
+                            <h4>Архитектурный декор</h4>
+                            <p>Лепнина, барельефы, картуши, маскароны. Сюжеты: советская символика, производственные мотивы, флора и фауна.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="element-card">
+                        <div class="element-icon">
+                            <i class="fas fa-chess-rook"></i>
+                        </div>
+                        <div class="element-text">
+                            <h4>Вертикальные акценты</h4>
+                            <p>Шпили, башенки, аттики. Создание ритма и подчёркивание важных градостроительных узлов.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="element-card">
+                        <div class="element-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="element-text">
+                            <h4>Симметрия и ритм</h4>
+                            <p>Строгая симметрия фасадов, ритмичное расположение оконных проёмов, гармоничные пропорции.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Материалы и технологии -->
+            <div class="era-detail">
+                <h3><i class="fas fa-hammer"></i> Материалы и технологии строительства</h3>
+                
+                <div class="materials-grid">
+                    <div class="material-item">
+                        <h4><i class="fas fa-brick"></i> Кирпичная кладка</h4>
+                        <p>Высококачественная лицевая кладка из красного кирпича. Часто использовался кирпич с клеймами заводов.</p>
+                    </div>
+                    
+                    <div class="material-item">
+                        <h4><i class="fas fa-mountain"></i> Натуральный камень</h4>
+                        <p>Гранит, мрамор для цоколей и парадных элементов. Лепнина из гипса и бетона.</p>
+                    </div>
+                    
+                    <div class="material-item">
+                        <h4><i class="fas fa-fire"></i> Каслинское литьё</h4>
+                        <p>Уникальная уральская техника. Кованые балконы, решётки, фонари с ажурным узором.</p>
+                    </div>
+                    
+                    <div class="material-item">
+                        <h4><i class="fas fa-tree"></i> Деревянные элементы</h4>
+                        <p>Качественная столярка: филёнчатые двери, паркетные полы, резные перила в подъездах.</p>
+                    </div>
+                </div>
+                
+                <div class="construction-note">
+                    <p><strong>Особенность магнитогорской застройки:</strong> Несмотря на послевоенную разруху, для строительства правобережного Магнитогорска не жалели ресурсов. Это была "витрина социализма", демонстрирующая успехи восстановления народного хозяйства.</p>
+                </div>
+            </div>
+
+            <!-- Современное состояние -->
+            <div class="era-detail">
+                <h3><i class="fas fa-eye"></i> Современное состояние и значение</h3>
+                
+                <div class="current-state">
+                    <div class="state-positive">
+                        <h4><i class="fas fa-check-circle"></i> Сохранённые ценности</h4>
+                        <ul>
+                            <li>Большинство ансамблей сохранило целостность</li>
+                            <li>ДК металлургов действует и реставрируется</li>
+                            <li>Проспекты Металлургов и Ленина — визитная карточка города</li>
+                            <li>Район остаётся престижным местом проживания</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="state-negative">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Проблемы сохранения</h4>
+                        <ul>
+                            <li>Физический износ конструкций (70+ лет)</li>
+                            <li>Самовольные перепланировки и остекление балконов</li>
+                            <li>Утрата элементов декора</li>
+                            <li>Необходимость комплексной реставрации</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="heritage-value">
+                    <h4><i class="fas fa-landmark"></i> Историко-культурная ценность</h4>
+                    <p>Застройка в стиле сталинского ампира представляет собой целостный градостроительный ансамбль, отражающий важнейший период истории Магнитогорска — послевоенное восстановление и превращение города в один из флагманов советской металлургии. Это архитектура, которая воспитывала гордость за трудовые подвиги магнитогорцев.</p>
+                </div>
             </div>
         </div>
     </main>
@@ -168,12 +229,12 @@
                     <strong>Учреждение:</strong> МОУ СОШ №65, г. Магнитогорск</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Страницы</h3>
+                    <h3>Архитектурные эпохи</h3>
                     <ul>
-                        <li><a href="../index.html">Главная</a></li>
-                        <li><a href="one.html">Эпохи</a></li>
-                        <li><a href="two.html">Объекты</a></li>
-                        <li><a href="three.html">Карта</a></li>
+                        <li><a href="constructivism.html">Конструктивизм</a></li>
+                        <li><a href="stalin_empire.html">Сталинский ампир</a></li>
+                        <li><a href="german_quarter.html">Немецкий квартал</a></li>
+                        <li><a href="map.html">Все объекты на карте</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

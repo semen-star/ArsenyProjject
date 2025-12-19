@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интерактивная карта | Архитектурная Магнитка</title>
+    <title>Конструктивизм 1930-х | Архитектурная Магнитка</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Для реальной карты раскомментировать -->
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
 </head>
 <body>
     <!-- Навигация -->
@@ -22,9 +20,10 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html">Главная</a></li>
-                <li><a href="one.html">Эпохи</a></li>
-                <li><a href="two.html">Объекты</a></li>
-                <li><a href="three.html" class="active">Карта</a></li>
+                <li><a href="constructivism.html" class="active">Конструктивизм</a></li>
+                <li><a href="stalin_empire.html">Сталинский ампир</a></li>
+                <li><a href="german_quarter.html">Немецкий квартал</a></li>
+                <li><a href="map.html">Карта</a></li>
                 <li><a href="../index.html#about">О проекте</a></li>
             </ul>
         </div>
@@ -33,128 +32,147 @@
     <!-- Шапка страницы -->
     <header class="inner-header">
         <div class="container inner-header-content">
-            <h1>Интерактивная карта объектов</h1>
-            <p>Исследуйте архитектурное наследие на карте Орджоникидзевского района</p>
+            <h1>Конструктивизм 1930-х</h1>
+            <p>Первые кварталы Соцгорода: архитектура новой жизни</p>
         </div>
     </header>
 
     <!-- Основной контент -->
     <main class="main-content">
         <div class="container">
-            <h2 class="section-title">Карта архитектурных объектов</h2>
-            
-            <div class="map-page-container">
-                <!-- Карта -->
-                <div class="map-wrapper slide-up">
-                    <div id="fullMap"></div>
-                </div>
-                
-                <!-- Легенда и информация -->
-                <div class="map-sidebar">
-                    <div class="map-legend slide-up">
-                        <h3 class="legend-title"><i class="fas fa-filter"></i> Фильтр по типам</h3>
-                        
-                        <div class="legend-item" data-type="stalin">
-                            <div class="legend-color red"></div>
-                            <div>
-                                <h4>Сталинский ампир</h4>
-                                <p>Дворцы, проспекты, колоннады</p>
-                            </div>
-                        </div>
-                        
-                        <div class="legend-item" data-type="construct">
-                            <div class="legend-color blue"></div>
-                            <div>
-                                <h4>Конструктивизм</h4>
-                                <p>Ранние кварталы, фабрики-кухни</p>
-                            </div>
-                        </div>
-                        
-                        <div class="legend-item" data-type="german">
-                            <div class="legend-color green"></div>
-                            <div>
-                                <h4>Немецкий квартал</h4>
-                                <p>Арочные галереи, плитняк</p>
-                            </div>
-                        </div>
-                        
-                        <div class="legend-item" data-type="modern">
-                            <div class="legend-color orange"></div>
-                            <div>
-                                <h4>Современность</h4>
-                                <p>Новые жилые комплексы</p>
-                            </div>
-                        </div>
-                        
-                        <button id="resetFilters" class="filter-btn" style="width: 100%; margin-top: 20px;">
-                            <i class="fas fa-redo"></i> Сбросить фильтры
-                        </button>
-                    </div>
-                    
-                    <!-- Информация о выбранном объекте -->
-                    <div class="map-legend slide-up">
-                        <h3 class="legend-title"><i class="fas fa-info-circle"></i> Информация об объекте</h3>
-                        <div id="objectInfo">
-                            <p style="text-align: center; color: #666; padding: 20px 0;">
-                                <i class="fas fa-mouse-pointer" style="font-size: 2rem; margin-bottom: 10px; display: block; color: #e74c3c;"></i>
-                                Нажмите на метку на карте, чтобы увидеть информацию об объекте
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Список всех объектов -->
-            <div class="era-detail" style="margin-top: 60px;">
-                <h3><i class="fas fa-list"></i> Все объекты на карте</h3>
+            <!-- Основная информация -->
+            <div class="era-detail">
+                <h3><i class="fas fa-cube"></i> Идеи и принципы конструктивизма</h3>
+                <p><strong>Конструктивизм</strong> — первый оригинальный стиль советской архитектуры, возникший в 1920-х годах как воплощение идей нового общества и человека.</p>
                 
                 <div class="era-info-grid">
                     <div class="info-card">
-                        <h4>Дворец культуры металлургов</h4>
-                        <p><strong>Адрес:</strong> пр. Ленина, 66</p>
-                        <p><strong>Год постройки:</strong> 1954</p>
-                        <p><strong>Стиль:</strong> Сталинский ампир</p>
-                        <button class="filter-btn small-btn" data-show-on-map="1">Показать на карте</button>
+                        <h4>Основные принципы</h4>
+                        <ul>
+                            <li><strong>Функционализм:</strong> "Форма следует функции"</li>
+                            <li><strong>Аскетизм:</strong> Отказ от декора, чистая геометрия</li>
+                            <li><strong>Техницизм:</strong> Архитектура как инженерное искусство</li>
+                            <li><strong>Коллективизм:</strong> Общественное над личным</li>
+                        </ul>
                     </div>
                     
                     <div class="info-card">
-                        <h4>Квартал №1 (Соцгород)</h4>
-                        <p><strong>Адрес:</strong> ул. Кирова, 25</p>
-                        <p><strong>Год постройки:</strong> 1932</p>
-                        <p><strong>Стиль:</strong> Конструктивизм</p>
-                        <button class="filter-btn small-btn" data-show-on-map="2">Показать на карте</button>
+                        <h4>Технические особенности</h4>
+                        <ul>
+                            <li>Железобетонные конструкции</li>
+                            <li>Ленточные окна</li>
+                            <li>Плоские эксплуатируемые крыши</li>
+                            <li>Свободная планировка</li>
+                            <li>Минимализм в отделке</li>
+                        </ul>
                     </div>
                     
                     <div class="info-card">
-                        <h4>Немецкий квартал (14-а)</h4>
-                        <p><strong>Адрес:</strong> кв. 14-а (ул. Гагарина)</p>
-                        <p><strong>Год постройки:</strong> 1948-1952</p>
-                        <p><strong>Стиль:</strong> Смешанный</p>
-                        <button class="filter-btn small-btn" data-show-on-map="3">Показать на карте</button>
-                    </div>
-                    
-                    <div class="info-card">
-                        <h4>Проспект Металлургов</h4>
-                        <p><strong>Адрес:</strong> пр. Металлургов</p>
-                        <p><strong>Год постройки:</strong> 1940-1950-е</p>
-                        <p><strong>Стиль:</strong> Сталинский ампир</p>
-                        <button class="filter-btn small-btn" data-show-on-map="4">Показать на карте</button>
+                        <h4>Социальные задачи</h4>
+                        <ul>
+                            <li>Создание домов-коммун</li>
+                            <li>Организация фабрик-кухонь</li>
+                            <li>Формирование коллективного быта</li>
+                            <li>Воспитание "нового человека"</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Инструкция -->
-            <div class="era-detail" style="margin-top: 40px;">
-                <h3><i class="fas fa-map-marked-alt"></i> Как пользоваться картой</h3>
-                <p>Для реализации полноценной интерактивной карты:</p>
-                <ol style="margin-left: 20px; margin-top: 15px;">
-                    <li>Зарегистрируйтесь на <a href="https://developer.tech.yandex.ru/" target="_blank">Яндекс.Карты API</a> или <a href="https://developers.google.com/maps" target="_blank">Google Maps Platform</a></li>
-                    <li>Получите API-ключ</li>
-                    <li>Раскомментируйте строку подключения API в секции &lt;head&gt; этого файла</li>
-                    <li>Замените заглушку в функции <code>initMap()</code> в файле <code>script.js</code> на реальный код карты</li>
-                    <li>Добавьте координаты реальных объектов Магнитогорска</li>
-                </ol>
-                <p><strong>Пример координат для Магнитогорска:</strong> 53.407° с.ш., 58.979° в.д.</p>
+
+            <!-- Ключевые объекты -->
+            <div class="era-detail">
+                <h3><i class="fas fa-building"></i> Ключевые объекты в Магнитогорске</h3>
+                
+                <div class="era-info-grid">
+                    <div class="info-card">
+                        <h4><i class="fas fa-home"></i> Квартал №1 (Соцгород)</h4>
+                        <p><strong>Год постройки:</strong> 1932</p>
+                        <p><strong>Адрес:</strong> ул. Кирова, 25-35</p>
+                        <p><strong>Особенности:</strong> Первый капитальный жилой квартал, спроектированный бригадой Эрнста Мая. Сохранился частично.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-utensils"></i> Фабрика-кухня ММК</h4>
+                        <p><strong>Год постройки:</strong> 1934</p>
+                        <p><strong>Адрес:</strong> ул. Труда, 28</p>
+                        <p><strong>Особенности:</strong> Типовой проект фабрики-кухни на 10 тысяч обедов в день. Символ коллективного питания.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-film"></i> Кинотеатр "Магнит"</h4>
+                        <p><strong>Год постройки:</strong> 1936</p>
+                        <p><strong>Адрес:</strong> пр. Ленина, 51</p>
+                        <p><strong>Особенности:</strong> Один из первых кинотеатров города. Простая геометрическая форма, функциональный дизайн.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Архитектурные особенности -->
+            <div class="era-detail">
+                <h3><i class="fas fa-drafting-compass"></i> Архитектурный язык конструктивизма</h3>
+                
+                <div class="arch-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-window-maximize"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Ленточное остекление</h4>
+                            <p>Сплошные горизонтальные окна, создающие ощущение лёгкости и наполняющие пространство светом.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Чистые геометрические формы</h4>
+                            <p>Прямоугольники, кубы, цилиндры. Отсутствие декора, акцент на пропорциях и ритме.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Индустриальная эстетика</h4>
+                            <p>Использование материалов промышленного производства: бетон, стекло, металл.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Социальная направленность</h4>
+                            <p>Архитектура как инструмент социальных преобразований, формирование нового быта.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Историческое значение -->
+            <div class="era-detail">
+                <h3><i class="fas fa-history"></i> Историческое значение</h3>
+                
+                <div class="historical-significance">
+                    <p>Конструктивизм в Магнитогорске — это не просто архитектурный стиль, а свидетельство эпохи грандиозных социальных экспериментов. Эти здания были построены в период, когда:</p>
+                    
+                    <ul class="significance-list">
+                        <li>Магнитогорск возводился как "идеальный социалистический город"</li>
+                        <li>Тысячи людей со всей страны приезжали строить металлургический гигант</li>
+                        <li>Формировались новые социальные отношения и бытовые практики</li>
+                        <li>Архитектура была призвана ускорить строительство коммунизма</li>
+                    </ul>
+                    
+                    <p class="current-status">
+                        <strong>Современное состояние:</strong> Многие здания конструктивизма находятся под угрозой сноса или 
+                        требуют срочной реставрации. Квартал №1 имеет статус объекта культурного наследия регионального значения.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
@@ -170,12 +188,12 @@
                     <strong>Учреждение:</strong> МОУ СОШ №65, г. Магнитогорск</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Страницы</h3>
+                    <h3>Архитектурные эпохи</h3>
                     <ul>
-                        <li><a href="../index.html">Главная</a></li>
-                        <li><a href="one.html">Эпохи</a></li>
-                        <li><a href="two.html">Объекты</a></li>
-                        <li><a href="three.html">Карта</a></li>
+                        <li><a href="constructivism.html">Конструктивизм</a></li>
+                        <li><a href="stalin_empire.html">Сталинский ампир</a></li>
+                        <li><a href="german_quarter.html">Немецкий квартал</a></li>
+                        <li><a href="map.html">Все объекты на карте</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
