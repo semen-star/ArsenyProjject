@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная карта | Архитектурная Магнитка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Для реальной карты раскомментировать -->
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-landmark"></i> МагнитАрх
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="one.html">Эпохи</a></li>
+                <li><a href="two.html">Объекты</a></li>
+                <li><a href="three.html" class="active">Карта</a></li>
+                <li><a href="../index.html#about">О проекте</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Шапка страницы -->
+    <header class="inner-header">
+        <div class="container inner-header-content">
+            <h1>Интерактивная карта объектов</h1>
+            <p>Исследуйте архитектурное наследие на карте Орджоникидзевского района</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">Карта архитектурных объектов</h2>
+            
+            <div class="map-page-container">
+                <!-- Карта -->
+                <div class="map-wrapper slide-up">
+                    <div id="fullMap"></div>
+                </div>
+                
+                <!-- Легенда и информация -->
+                <div class="map-sidebar">
+                    <div class="map-legend slide-up">
+                        <h3 class="legend-title"><i class="fas fa-filter"></i> Фильтр по типам</h3>
+                        
+                        <div class="legend-item" data-type="stalin">
+                            <div class="legend-color red"></div>
+                            <div>
+                                <h4>Сталинский ампир</h4>
+                                <p>Дворцы, проспекты, колоннады</p>
+                            </div>
+                        </div>
+                        
+                        <div class="legend-item" data-type="construct">
+                            <div class="legend-color blue"></div>
+                            <div>
+                                <h4>Конструктивизм</h4>
+                                <p>Ранние кварталы, фабрики-кухни</p>
+                            </div>
+                        </div>
+                        
+                        <div class="legend-item" data-type="german">
+                            <div class="legend-color green"></div>
+                            <div>
+                                <h4>Немецкий квартал</h4>
+                                <p>Арочные галереи, плитняк</p>
+                            </div>
+                        </div>
+                        
+                        <div class="legend-item" data-type="modern">
+                            <div class="legend-color orange"></div>
+                            <div>
+                                <h4>Современность</h4>
+                                <p>Новые жилые комплексы</p>
+                            </div>
+                        </div>
+                        
+                        <button id="resetFilters" class="filter-btn" style="width: 100%; margin-top: 20px;">
+                            <i class="fas fa-redo"></i> Сбросить фильтры
+                        </button>
+                    </div>
+                    
+                    <!-- Информация о выбранном объекте -->
+                    <div class="map-legend slide-up">
+                        <h3 class="legend-title"><i class="fas fa-info-circle"></i> Информация об объекте</h3>
+                        <div id="objectInfo">
+                            <p style="text-align: center; color: #666; padding: 20px 0;">
+                                <i class="fas fa-mouse-pointer" style="font-size: 2rem; margin-bottom: 10px; display: block; color: #e74c3c;"></i>
+                                Нажмите на метку на карте, чтобы увидеть информацию об объекте
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Список всех объектов -->
+            <div class="era-detail" style="margin-top: 60px;">
+                <h3><i class="fas fa-list"></i> Все объекты на карте</h3>
+                
+                <div class="era-info-grid">
+                    <div class="info-card">
+                        <h4>Дворец культуры металлургов</h4>
+                        <p><strong>Адрес:</strong> пр. Ленина, 66</p>
+                        <p><strong>Год постройки:</strong> 1954</p>
+                        <p><strong>Стиль:</strong> Сталинский ампир</p>
+                        <button class="filter-btn small-btn" data-show-on-map="1">Показать на карте</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Квартал №1 (Соцгород)</h4>
+                        <p><strong>Адрес:</strong> ул. Кирова, 25</p>
+                        <p><strong>Год постройки:</strong> 1932</p>
+                        <p><strong>Стиль:</strong> Конструктивизм</p>
+                        <button class="filter-btn small-btn" data-show-on-map="2">Показать на карте</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Немецкий квартал (14-а)</h4>
+                        <p><strong>Адрес:</strong> кв. 14-а (ул. Гагарина)</p>
+                        <p><strong>Год постройки:</strong> 1948-1952</p>
+                        <p><strong>Стиль:</strong> Смешанный</p>
+                        <button class="filter-btn small-btn" data-show-on-map="3">Показать на карте</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Проспект Металлургов</h4>
+                        <p><strong>Адрес:</strong> пр. Металлургов</p>
+                        <p><strong>Год постройки:</strong> 1940-1950-е</p>
+                        <p><strong>Стиль:</strong> Сталинский ампир</p>
+                        <button class="filter-btn small-btn" data-show-on-map="4">Показать на карте</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Инструкция -->
+            <div class="era-detail" style="margin-top: 40px;">
+                <h3><i class="fas fa-map-marked-alt"></i> Как пользоваться картой</h3>
+                <p>Для реализации полноценной интерактивной карты:</p>
+                <ol style="margin-left: 20px; margin-top: 15px;">
+                    <li>Зарегистрируйтесь на <a href="https://developer.tech.yandex.ru/" target="_blank">Яндекс.Карты API</a> или <a href="https://developers.google.com/maps" target="_blank">Google Maps Platform</a></li>
+                    <li>Получите API-ключ</li>
+                    <li>Раскомментируйте строку подключения API в секции &lt;head&gt; этого файла</li>
+                    <li>Замените заглушку в функции <code>initMap()</code> в файле <code>script.js</code> на реальный код карты</li>
+                    <li>Добавьте координаты реальных объектов Магнитогорска</li>
+                </ol>
+                <p><strong>Пример координат для Магнитогорска:</strong> 53.407° с.ш., 58.979° в.д.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Архитектурная Магнитка</h3>
+                    <p>Образовательный проект об архитектуре Орджоникидзевского района Магнитогорска. © 2025</p>
+                    <p><strong>Автор:</strong> Стариков Арсений Михайлович<br>
+                    <strong>Учреждение:</strong> МОУ СОШ №65, г. Магнитогорск</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Страницы</h3>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="one.html">Эпохи</a></li>
+                        <li><a href="two.html">Объекты</a></li>
+                        <li><a href="three.html">Карта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты автора</h3>
+                    <p>Стариков Арсений</p>
+                    <div class="social-links">
+                        <a href="https://vk.com/id573348096" target="_blank" title="ВКонтакте">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="https://t.me/Senya131313" target="_blank" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                    <p class="footer-note">Для связи по вопросам проекта</p>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-copy">Создано с <i class="fas fa-heart"></i> для Магнитогорска | 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

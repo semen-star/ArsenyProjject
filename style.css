@@ -502,3 +502,16 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Дополнительные стили для новой информации в футере */
+.footer-col strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    color: #bdc3c7;
+    margin-top: 8px;
+    font-style: italic;
+}
